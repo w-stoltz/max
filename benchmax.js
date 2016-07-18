@@ -1,4 +1,4 @@
-var bench = prompt("What is your bench");
+var bench = document.getElementById('bench').value
 if (bench > 500) {
   console.log("Shut up liar");
   var bench = prompt("What is your bench");
