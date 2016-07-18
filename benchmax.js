@@ -25,8 +25,7 @@ else if(isNaN(benchReps)){
 var repArray = [0, 1, 1.07, 1.12, 1.15, 1.18, 1.21, 1.24, 1.27, 1.30, 1.33];
 var bRep = repArray[benchReps];
 var benchMax = benchWeight * bRep;
-alert("You can max bench " + benchMax);
 
+document.getElementById("target").innerHTML = benchMax
 };
 }
-
