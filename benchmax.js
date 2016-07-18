@@ -1,18 +1,17 @@
-var bench = prompt("what is your bench");
+var bench = prompt("What is your bench");
 if (bench > 500) {
-  console.log("shut up liar");
-  var bench = prompt("what is your bench");
+  console.log("Shut up liar");
+  var bench = prompt("What is your bench");
 }
 else if(isNaN(bench)){
-  console.log("put in a real number")
-  var bench = prompt("what is your bench");
+  console.log("Put in a real number")
+  var bench = prompt("What is your bench");
 }
 
-
-var benchreps = prompt("how many reps");
+var benchreps = prompt("How many reps");
 if (benchreps > 20) {
-  console.log("do less cardio");
-  var benchreps = prompt("how many reps");
+  console.log("Do less cardio");
+  var benchreps = prompt("How many reps");
 }
 else if(isNaN(benchreps)){
   console.log("u wot")
