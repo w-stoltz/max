@@ -12,25 +12,24 @@ var formD = document.getElementById("deadliftMaxForm");
     repsD = document.getElementById("deadliftReps");
 
 
+
 form.oninput = function() {
    var benchWeight = weight.value;
    var benchReps = reps.value;
+   console.log(benchWeight);
+   console.log(benchReps)
 
 if (benchWeight > 500) {
   alert("Shut up liar");
-  return false;
 }
 else if(isNaN(benchWeight)){
   alert("Put in a real number")
-  return false;
 }
 if (benchReps > 20) {
   alert("Do less cardio");
-  return false;
 }
 else if(isNaN(benchReps)){
   alert("u wot")
-  return false;
 }
 var repArray = [0, 1, 1.07, 1.12, 1.15, 1.18, 1.21, 1.24, 1.27, 1.30, 1.33];
 var bRep = repArray[benchReps];
@@ -43,6 +42,8 @@ if (isNaN(benchMax)) {
 }
 else {
   document.getElementById("target1").innerHTML = benchMax
+  document.getElementById("benchBar").value = benchMax
+
 }
 
 };
@@ -51,22 +52,20 @@ else {
 formS.oninput = function() {
    var squatWeight = weightS.value;
    var squatReps = repsS.value;
+   console.log(squatWeight);
+   console.log(squatReps)
 
 if (squatWeight > 500) {
   alert("Shut up liar");
-  return false;
 }
 else if(isNaN(squatWeight)){
   alert("Put in a real number")
-  return false;
 }
 if (squatReps > 20) {
   alert("Do less cardio");
-  return false;
 }
 else if(isNaN(squatReps)){
   alert("u wot")
-  return false;
 }
 var repArray = [0, 1, 1.07, 1.12, 1.15, 1.18, 1.21, 1.24, 1.27, 1.30, 1.33];
 var sRep = repArray[squatReps];
@@ -79,6 +78,7 @@ if (isNaN(squatMax)) {
 }
 else {
   document.getElementById("target2").innerHTML = squatMax
+  document.getElementById("squatBar").value = squatMax
 }
 
 };
@@ -88,22 +88,20 @@ else {
 formD.oninput = function() {
    var deadliftWeight = weightD.value;
    var deadliftReps = repsD.value;
+   console.log(deadliftWeight);
+   console.log(deadliftReps)
 
 if (deadliftWeight > 500) {
   alert("Shut up liar");
-  return false;
 }
 else if(isNaN(deadliftWeight)){
   alert("Put in a real number")
-  return false;
 }
 if (deadliftReps > 20) {
   alert("Do less cardio");
-  return false;
 }
 else if(isNaN(deadliftReps)){
   alert("u wot")
-  return false;
 }
 var repArray = [0, 1, 1.07, 1.12, 1.15, 1.18, 1.21, 1.24, 1.27, 1.30, 1.33];
 var dRep = repArray[deadliftReps];
@@ -116,6 +114,7 @@ if (isNaN(deadliftMax)) {
 }
 else {
   document.getElementById("target3").innerHTML = deadliftMax
+  document.getElementById("deadliftBar").value = deadliftMax
 }
 
 };
