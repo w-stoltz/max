@@ -4,6 +4,7 @@
 <title>Find Your Max</title>
 <script src="assets/js/benchmax.js"></script>
 <!-- js file  linked to html file-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
@@ -13,6 +14,32 @@
   </section>
 
   <section id="benchCalculator" class="wrapper style2 special">
+
+    <!-- Rectangular switch -->
+    <label class="switch">
+      <input name = "kg" id = "kg" type="checkbox">
+      <div class="slider"></div>
+    </label>
+
+
+
+    <div class="inner narrow">
+      <header>
+        <h2>How much do you weigh</h2>
+      </header>
+      <form class="grid-form" id="bwForm" method="post" action="#" name="bwForm">
+        <div class="form-control narrow">
+          <label for="body weight">Body weight</label>
+          <input name="bodyWeight" id="bodyWeight" type="text">
+        </div>
+
+        <div class="form-control">
+          <label for="weight">You weigh:</label>
+          <h2><p id="target4"></p></h2>
+        </div>
+      </form>
+
+
     <div class="inner narrow">
       <header>
         <h2>Find Your Bench Max</h2>
@@ -29,8 +56,12 @@
         <div class="form-control">
           <label for="bench">Your 1 Rep Max is:</label>
           <h2><p id="target1"></p></h2>
+          <progress id="benchBar" max="500" value="0"></progress>
         </div>
       </form>
+
+
+
     </div>
 
     <div class="inner narrow">
@@ -49,6 +80,7 @@
         <div class="form-control">
           <label for="squat">Your 1 Rep Max is:</label>
           <h2><p id="target2"></p></h2>
+          <progress id="squatBar" max="500" value="0"></progress>
         </div>
       </form>
     </div>
@@ -69,6 +101,7 @@
       <div class="form-control">
         <label for="deadlift">Your 1 Rep Max is:</label>
         <h2><p id="target3"></p></h2>
+        <progress id="deadliftBar" max="500" value="0"></progress>
       </div>
     </form>
   </div>

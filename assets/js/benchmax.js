@@ -11,12 +11,37 @@ var formD = document.getElementById("deadliftMaxForm");
     weightD = document.getElementById("deadliftWeight");
     repsD = document.getElementById("deadliftReps");
 
+var formBW = document.getElementById("bwForm");
+    bW = document.getElementById("bodyWeight");
+    
+var slider = document.getElementById("kg");
+
+slider.onchange = function() {
+  benchMax/2.2;
+  squatMax/2.2;
+  deadliftMax/2.2;
+  bodyWeight/2.2;
+
+
+}
+
+formBW.oninput = function() {
+  var bodyWeight = bW.value;
+
+  console.log(bodyWeight);
+
+if (bodyWeight > 0) {
+      console.log(bodyWeight);
+      document.getElementById("target4").innerHTML = bodyWeight
+
+  }
+};
 
 form.oninput = function() {
    var benchWeight = weight.value;
    var benchReps = reps.value;
    console.log(benchWeight);
-   console.log(benchReps)
+   console.log(benchReps);
 
 if (benchWeight > 500) {
   alert("Shut up liar");
@@ -41,6 +66,8 @@ if (isNaN(benchMax)) {
 }
 else {
   document.getElementById("target1").innerHTML = benchMax
+  document.getElementById("benchBar").value = benchMax
+
 }
 
 };
@@ -75,6 +102,7 @@ if (isNaN(squatMax)) {
 }
 else {
   document.getElementById("target2").innerHTML = squatMax
+  document.getElementById("squatBar").value = squatMax
 }
 
 };
@@ -110,6 +138,7 @@ if (isNaN(deadliftMax)) {
 }
 else {
   document.getElementById("target3").innerHTML = deadliftMax
+  document.getElementById("deadliftBar").value = deadliftMax
 }
 
 };
