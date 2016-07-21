@@ -37,6 +37,7 @@ if (bodyWeight > 0) {
   }
 };
 
+
 form.oninput = function() {
    var benchWeight = weight.value;
    var benchReps = reps.value;
